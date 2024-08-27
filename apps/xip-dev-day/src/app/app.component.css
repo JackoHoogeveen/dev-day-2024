@@ -1,0 +1,86 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+
+.container {
+  display: block;
+  border:3px solid darkgrey;
+  border-radius: 15px;
+  padding: 50px;
+  width: 600px;
+  height: 400px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1, h2 {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: slategrey;
+}
+
+h1 {
+  text-align: center;
+  font-size: 100px;
+  margin: 0;
+  padding: 0;
+
+
+}
+
+h2 {
+  text-align: center;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+status-button {
+  --status-button-width: 300px;
+  --status-button-height: 100px;
+}
+
+p {
+  font-size: 40px;
+  line-height: 40px;
+  margin: 0;
+  margin-top:60px
+}
+
+.bouncy {
+  animation-name: zoomInZoomOut;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+.tremmor {
+  animation-name: tilt-shaking;
+  animation-duration: 0.1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes zoomInZoomOut {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(0.8, 0.8);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes tilt-shaking {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}

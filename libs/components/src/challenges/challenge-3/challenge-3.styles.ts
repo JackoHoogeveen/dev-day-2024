@@ -4,8 +4,9 @@ export const styles = [
   css`
     .wrapper {
       border: 1px solid black;
-      border-top: 10px solid red;
+      border-top: 5px solid red;
       padding: 10px;
+      border-radius: 5px;
     }
 
     .primary {

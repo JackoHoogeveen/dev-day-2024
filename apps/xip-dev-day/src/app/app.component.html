@@ -1,2 +1,22 @@
-<example-component hint="click" count="0"></example-component>
+<div class="wrapper">
+  <div class="container">
+    @if (showRandomNumber$ | async) {
+      <h1>{{randomNumber$ | async}}</h1>
+    } @else {
+      <h1 class="bouncy">{{pickedNumber$ | async}}</h1>
+    }
+
+    <h2>Druk op de knop voor een random getal</h2>
+    <div class="button-wrapper">
+      <status-button [status]="status$ | async" (click)="clickButton()">
+        <p slot="neutral">Doe maar!</p>
+        <p slot="busy" class="tremmor">FF wachten</p>
+        <p slot="succes" class="bouncy">Pizza!</p>
+        <p slot="error">Helaas pindakaas</p>
+      </status-button>
+    </div>
+
+  </div>
+</div>
+
 <router-outlet></router-outlet>
